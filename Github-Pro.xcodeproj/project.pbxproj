@@ -14,6 +14,8 @@
 		8B63EBEA2445D411009CFA30 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B63EBE82445D411009CFA30 /* LaunchScreen.storyboard */; };
 		8B63EBF22445DA09009CFA30 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B63EBF12445DA09009CFA30 /* SearchVC.swift */; };
 		8B63EBF42445DA45009CFA30 /* FavoritesListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B63EBF32445DA45009CFA30 /* FavoritesListVC.swift */; };
+		8B63EBF62445EE33009CFA30 /* GFButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B63EBF52445EE33009CFA30 /* GFButton.swift */; };
+		8B63EBF824460E84009CFA30 /* GFTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B63EBF724460E84009CFA30 /* GFTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		8B63EBEB2445D411009CFA30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B63EBF12445DA09009CFA30 /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
 		8B63EBF32445DA45009CFA30 /* FavoritesListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesListVC.swift; sourceTree = "<group>"; };
+		8B63EBF52445EE33009CFA30 /* GFButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFButton.swift; sourceTree = "<group>"; };
+		8B63EBF724460E84009CFA30 /* GFTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +68,8 @@
 				8B63EBE62445D411009CFA30 /* Assets.xcassets */,
 				8B63EBE82445D411009CFA30 /* LaunchScreen.storyboard */,
 				8B63EBEB2445D411009CFA30 /* Info.plist */,
+				8B63EBF52445EE33009CFA30 /* GFButton.swift */,
+				8B63EBF724460E84009CFA30 /* GFTextField.swift */,
 				8B63EBF12445DA09009CFA30 /* SearchVC.swift */,
 				8B63EBF32445DA45009CFA30 /* FavoritesListVC.swift */,
 			);
@@ -142,9 +148,11 @@
 			files = (
 				8B63EBF22445DA09009CFA30 /* SearchVC.swift in Sources */,
 				8B63EBE22445D410009CFA30 /* ViewController.swift in Sources */,
+				8B63EBF62445EE33009CFA30 /* GFButton.swift in Sources */,
 				8B63EBF42445DA45009CFA30 /* FavoritesListVC.swift in Sources */,
 				8B63EBDE2445D410009CFA30 /* AppDelegate.swift in Sources */,
 				8B63EBE02445D410009CFA30 /* SceneDelegate.swift in Sources */,
+				8B63EBF824460E84009CFA30 /* GFTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
