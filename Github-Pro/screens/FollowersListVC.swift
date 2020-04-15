@@ -11,15 +11,25 @@ import UIKit
 
 
 class FollowersListVC: UIViewController {
-    var username:String?
+    var username:String!
 
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
        navigationController?.navigationBar.prefersLargeTitles = true
-        print(username ?? "")
         view.backgroundColor = .systemBackground
+        
+        NetworkManager.shared.getFollowers(for: username, page: 1) { (followers, errorMessage) in
+            
+            guard let followers = followers else {
+                self.presentGFAlertOnMainThread(title: "Something went wrong", message: errorMessage!, buttonTitle: "Ok")
+                return
+            }
+            
+            print("followers.count  \(followers.count)")
+            print(followers)
+        }
 
     }
     
@@ -31,6 +41,7 @@ class FollowersListVC: UIViewController {
         
         
     }
+    
     
 
      
