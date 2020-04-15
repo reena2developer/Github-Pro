@@ -18,7 +18,7 @@ class FollowersListVC: UIViewController {
         super.viewDidLoad()
         
         navigationController?.navigationBar.prefersLargeTitles = true
-        print(username)
+        print(username ?? "")
         view.backgroundColor = .systemBackground
         navigationController?.isNavigationBarHidden = false
 
