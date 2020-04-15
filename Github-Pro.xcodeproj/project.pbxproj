@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B0F08112446CA7800AEBACF /* FollowersListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0F08102446CA7800AEBACF /* FollowersListVC.swift */; };
 		8B63EBDE2445D410009CFA30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B63EBDD2445D410009CFA30 /* AppDelegate.swift */; };
 		8B63EBE02445D410009CFA30 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B63EBDF2445D410009CFA30 /* SceneDelegate.swift */; };
 		8B63EBE22445D410009CFA30 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B63EBE12445D410009CFA30 /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8B0F08102446CA7800AEBACF /* FollowersListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersListVC.swift; sourceTree = "<group>"; };
 		8B63EBDA2445D410009CFA30 /* Github-Pro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Github-Pro.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B63EBDD2445D410009CFA30 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8B63EBDF2445D410009CFA30 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 				8B63EBF52445EE33009CFA30 /* GFButton.swift */,
 				8B63EBF724460E84009CFA30 /* GFTextField.swift */,
 				8B63EBF12445DA09009CFA30 /* SearchVC.swift */,
+				8B0F08102446CA7800AEBACF /* FollowersListVC.swift */,
 				8B63EBF32445DA45009CFA30 /* FavoritesListVC.swift */,
 			);
 			path = "Github-Pro";
@@ -148,6 +151,7 @@
 			files = (
 				8B63EBF22445DA09009CFA30 /* SearchVC.swift in Sources */,
 				8B63EBE22445D410009CFA30 /* ViewController.swift in Sources */,
+				8B0F08112446CA7800AEBACF /* FollowersListVC.swift in Sources */,
 				8B63EBF62445EE33009CFA30 /* GFButton.swift in Sources */,
 				8B63EBF42445DA45009CFA30 /* FavoritesListVC.swift in Sources */,
 				8B63EBDE2445D410009CFA30 /* AppDelegate.swift in Sources */,

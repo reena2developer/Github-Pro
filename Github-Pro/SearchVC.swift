@@ -14,7 +14,14 @@ class SearchVC: UIViewController {
     let usernameTextField = GFTextField()
     let callActionButton  = GFButton(backgroundColor: .systemGreen, title: "Get Followers")
     
+    var isUserNameEntered:Bool {
+        
+        return usernameTextField.text!.isEmpty
+    }
     
+    
+    
+    //MARK: lifecycle
     
 
     override func viewDidLoad() {
@@ -25,6 +32,7 @@ class SearchVC: UIViewController {
         configureLogoImageView()
         configureTextField()
         configureCallToActionButton()
+        createDismissKeyboardTapGesture()
         
         
     }
@@ -35,6 +43,15 @@ class SearchVC: UIViewController {
     }
     
     
+    
+    
+    //MARK: Custom Functions
+    func createDismissKeyboardTapGesture(){
+        
+        let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing))
+        view.addGestureRecognizer(tap)
+        
+    }
     
     
     func configureLogoImageView() {
@@ -59,6 +76,8 @@ class SearchVC: UIViewController {
     func configureTextField() {
         
         view.addSubview(usernameTextField)
+        usernameTextField.delegate = self
+
         usernameTextField.translatesAutoresizingMaskIntoConstraints = false
 
         NSLayoutConstraint.activate([
@@ -74,6 +93,7 @@ class SearchVC: UIViewController {
     func configureCallToActionButton(){
         
         view.addSubview(callActionButton)
+        callActionButton.addTarget(self, action: #selector(pushFollowersListVC), for: .touchUpInside)
         
         NSLayoutConstraint.activate([
         
@@ -85,6 +105,24 @@ class SearchVC: UIViewController {
         ])
         
     }
+    
+   @objc func pushFollowersListVC(){
+        
+    let followersListVC = FollowersListVC()
+    followersListVC.username = usernameTextField.text
+    followersListVC.title = usernameTextField.text
+    navigationController?.pushViewController(followersListVC, animated: true)
+    }
 
 
+}
+
+
+extension SearchVC: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        print("yes")
+        pushFollowersListVC()
+
+        return true
+    }
 }
