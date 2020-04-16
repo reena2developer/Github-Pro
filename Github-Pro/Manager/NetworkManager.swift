@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 
 class NetworkManager {
@@ -14,6 +15,7 @@ class NetworkManager {
     static let shared = NetworkManager()
     let baseURL = "https://api.github.com/users/"
     
+    let cache = NSCache<NSString,UIImage>()  // handle singular cache 
     
     
     private init() {}
