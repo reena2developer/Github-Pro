@@ -26,6 +26,7 @@
 		8B63EBF42445DA45009CFA30 /* FavoritesListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B63EBF32445DA45009CFA30 /* FavoritesListVC.swift */; };
 		8B63EBF62445EE33009CFA30 /* GFButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B63EBF52445EE33009CFA30 /* GFButton.swift */; };
 		8B63EBF824460E84009CFA30 /* GFTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B63EBF724460E84009CFA30 /* GFTextField.swift */; };
+		8B9555D024488B1D004BB0C8 /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9555CF24488B1D004BB0C8 /* UIHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		8B63EBF32445DA45009CFA30 /* FavoritesListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesListVC.swift; sourceTree = "<group>"; };
 		8B63EBF52445EE33009CFA30 /* GFButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFButton.swift; sourceTree = "<group>"; };
 		8B63EBF724460E84009CFA30 /* GFTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFTextField.swift; sourceTree = "<group>"; };
+		8B9555CF24488B1D004BB0C8 /* UIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				8B0F082824476B1E00AEBACF /* ErrorMessage.swift */,
+				8B9555CF24488B1D004BB0C8 /* UIHelper.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -245,6 +248,7 @@
 				8B0F08192446FDA200AEBACF /* UIViewController+Ext.swift in Sources */,
 				8B0F08112446CA7800AEBACF /* FollowersListVC.swift in Sources */,
 				8B63EBF62445EE33009CFA30 /* GFButton.swift in Sources */,
+				8B9555D024488B1D004BB0C8 /* UIHelper.swift in Sources */,
 				8B0F082E24478BC100AEBACF /* GFAvatarImageView.swift in Sources */,
 				8B63EBF42445DA45009CFA30 /* FavoritesListVC.swift in Sources */,
 				8B0F08172446F0FD00AEBACF /* GFAlertVC.swift in Sources */,

@@ -10,9 +10,7 @@ import UIKit
 
 class FollowersListVC: UIViewController {
     
-    enum Section {
-        case main
-    }
+    enum Section {case main}
     
     var followers:[Follower] = []
     
@@ -46,38 +44,26 @@ class FollowersListVC: UIViewController {
      func configureCollectionView(){
         
         
-        collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: createThreeColoumnFlowLayout())
+        collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: UIHelper.createThreeColoumnFlowLayout(in: view))
         view.addSubview(collectionView)
         
         collectionView.backgroundColor = .systemBackground
         collectionView.register(FollowerCell.self, forCellWithReuseIdentifier: FollowerCell.reuseID)
     }
     
-    func createThreeColoumnFlowLayout() -> UICollectionViewFlowLayout {
-        
-        
-           let width                       = view.bounds.width
-           let padding: CGFloat            = 12
-           let minimumItemSpacing: CGFloat = 10
-           let availableWidth              = width - (padding * 2) - (minimumItemSpacing * 2)
-           let itemWidth                   = availableWidth / 3
-           
-           let flowLayout                  = UICollectionViewFlowLayout()
-           flowLayout.sectionInset         = UIEdgeInsets(top: padding, left: padding, bottom: padding, right: padding)
-           flowLayout.itemSize             = CGSize(width: itemWidth, height: itemWidth + 40)
-           
-           return flowLayout
-        
-    }
+ 
     
     func getFollowers(){
         
-        NetworkManager.shared.getFollowers(for: username, page: 1) { (result) in
+        // very imporant  for the memory leak we need to make the self as a weak veriable but anything that is weak its going  to be optional , [weak self called the capture list]
+        
+        NetworkManager.shared.getFollowers(for: username, page: 1) { [weak self] (result) in
+            
+            guard let self = self else {return}
             switch result {
             case .success(let followers):
                 
                 self.followers = followers
-                print(self.followers)
                 self.updateData()
             case .failure(let error):
                 self.presentGFAlertOnMainThread(title: "Something went wrong", message:error.rawValue, buttonTitle: "Ok")
