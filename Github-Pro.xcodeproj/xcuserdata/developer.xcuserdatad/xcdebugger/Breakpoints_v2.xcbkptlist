@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "A64D8189-B762-489C-B012-A773A579DDF1"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7A4D08E9-C8F0-43FC-A380-368BA8CE3680"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Github-Pro/Manager/NetworkManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "NetworkManager"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C5C08C2B-DF75-4365-B459-6FF3DE3D98FF"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Github-Pro/Manager/NetworkManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "getFollowers(for:page:completed:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B8A9F1E3-C848-4475-9B10-EACD3525A322"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Github-Pro/screens/FollowersListVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "B8A9F1E3-C848-4475-9B10-EACD3525A322 - ead096030e31e4b2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Github_Pro.FollowersListVC.viewDidLoad() -&gt; ()"
+                  moduleName = "Github-Pro"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/developer/Desktop/swift5/swiftUI2020/Sean-Allen/Github-Pro/Github-Pro/screens/FollowersListVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "635">
+               </Location>
+               <Location
+                  uuid = "B8A9F1E3-C848-4475-9B10-EACD3525A322 - eba1707a3639bced"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Array&lt;Github_Pro.Follower&gt;&gt;, Swift.Optional&lt;Swift.String&gt;) -&gt; () in Github_Pro.FollowersListVC.viewDidLoad() -&gt; ()"
+                  moduleName = "Github-Pro"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/developer/Desktop/swift5/swiftUI2020/Sean-Allen/Github-Pro/Github-Pro/screens/FollowersListVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "177">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DA60387D-0E88-4A62-968E-413DA3246497"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Github-Pro/Manager/NetworkManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "getFollowers(for:page:completed:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "135D29DA-8EAD-48E5-ACFC-F904C5B32C08"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Github-Pro/Manager/NetworkManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "getFollowers(for:page:completed:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "135D29DA-8EAD-48E5-ACFC-F904C5B32C08 - fd5c104efdb0d753"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Github_Pro.NetworkManager.getFollowers(for: Swift.String, page: Swift.Int, completed: (Swift.Optional&lt;Swift.Array&lt;Github_Pro.Follower&gt;&gt;, Swift.Optional&lt;Swift.String&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Github-Pro"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/developer/Desktop/swift5/swiftUI2020/Sean-Allen/Github-Pro/Github-Pro/Manager/NetworkManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "932">
+               </Location>
+               <Location
+                  uuid = "135D29DA-8EAD-48E5-ACFC-F904C5B32C08 - 80a998f210e0e307"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Github_Pro.NetworkManager.getFollowers(for: Swift.String, page: Swift.Int, completed: (Swift.Optional&lt;Swift.Array&lt;Github_Pro.Follower&gt;&gt;, Swift.Optional&lt;Swift.String&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Github-Pro"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/developer/Desktop/swift5/swiftUI2020/Sean-Allen/Github-Pro/Github-Pro/Manager/NetworkManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "239">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "727785FC-FBCC-4EBE-85A1-169754BBADDA"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Github-Pro/Manager/NetworkManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "getFollowers(for:page:completed:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

@@ -13,9 +13,9 @@ import UIKit
 class NetworkManager {
     
     static let shared = NetworkManager()
-    let baseURL = "https://api.github.com/users/"
+    private let baseURL  = "https://api.github.com/users/"
     
-    let cache = NSCache<NSString,UIImage>()  // handle singular cache 
+     let cache    = NSCache<NSString,UIImage>()  // handle singular cache
     
     
     private init() {}
