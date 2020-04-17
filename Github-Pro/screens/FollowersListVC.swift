@@ -58,11 +58,17 @@ class FollowersListVC: UIViewController {
     
     func getFollowers(username:String,page:Int){
         
+        
+        // loading indicator start
+        
+        showLoadingView()
         // very imporant  for the memory leak we need to make the self as a weak veriable but anything that is weak its going  to be optional , [weak self called the capture list]
         
         NetworkManager.shared.getFollowers(for: username, page: page) { [weak self] (result) in
-            
+                        
             guard let self = self else {return}
+            self.dismissLoadingView()
+
             switch result {
             case .success(let followers):
                 if followers.count < 100 {self.hasMoreFollower = false}
@@ -101,9 +107,9 @@ class FollowersListVC: UIViewController {
 extension FollowersListVC: UICollectionViewDelegate{
     
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-        let offSetY = scrollView.contentOffset.y
-        let contentHeight = scrollView.contentSize.height
-        let height = scrollView.frame.size.height
+        let offSetY = scrollView.contentOffset.y  // provide the numbers in points like how far we scroll
+        let contentHeight = scrollView.contentSize.height // total height of the scroll view
+        let height = scrollView.frame.size.height  // height of the  scroll view in a device
         
         
         if offSetY > contentHeight - height {
