@@ -50,38 +50,6 @@
             endingLineNumber = "30"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "B8A9F1E3-C848-4475-9B10-EACD3525A322 - ead096030e31e4b2"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Github_Pro.FollowersListVC.viewDidLoad() -&gt; ()"
-                  moduleName = "Github-Pro"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/developer/Desktop/swift5/swiftUI2020/Sean-Allen/Github-Pro/Github-Pro/screens/FollowersListVC.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "23"
-                  endingLineNumber = "23"
-                  offsetFromSymbolStart = "635">
-               </Location>
-               <Location
-                  uuid = "B8A9F1E3-C848-4475-9B10-EACD3525A322 - eba1707a3639bced"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Array&lt;Github_Pro.Follower&gt;&gt;, Swift.Optional&lt;Swift.String&gt;) -&gt; () in Github_Pro.FollowersListVC.viewDidLoad() -&gt; ()"
-                  moduleName = "Github-Pro"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/developer/Desktop/swift5/swiftUI2020/Sean-Allen/Github-Pro/Github-Pro/screens/FollowersListVC.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "25"
-                  endingLineNumber = "25"
-                  offsetFromSymbolStart = "177">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -116,33 +84,33 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "135D29DA-8EAD-48E5-ACFC-F904C5B32C08 - fd5c104efdb0d753"
+                  uuid = "135D29DA-8EAD-48E5-ACFC-F904C5B32C08 - 79d1f90705754d1d"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "Github_Pro.NetworkManager.getFollowers(for: Swift.String, page: Swift.Int, completed: (Swift.Optional&lt;Swift.Array&lt;Github_Pro.Follower&gt;&gt;, Swift.Optional&lt;Swift.String&gt;) -&gt; ()) -&gt; ()"
+                  symbolName = "Github_Pro.NetworkManager.getFollowers(for: Swift.String, page: Swift.Int, completed: (Swift.Result&lt;Swift.Array&lt;Github_Pro.Follower&gt;, Github_Pro.GFError&gt;) -&gt; ()) -&gt; ()"
                   moduleName = "Github-Pro"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/developer/Desktop/swift5/swiftUI2020/Sean-Allen/Github-Pro/Github-Pro/Manager/NetworkManager.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "31"
-                  endingLineNumber = "31"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
                   offsetFromSymbolStart = "932">
                </Location>
                <Location
-                  uuid = "135D29DA-8EAD-48E5-ACFC-F904C5B32C08 - 80a998f210e0e307"
+                  uuid = "135D29DA-8EAD-48E5-ACFC-F904C5B32C08 - a3f394368ba61905"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Github_Pro.NetworkManager.getFollowers(for: Swift.String, page: Swift.Int, completed: (Swift.Optional&lt;Swift.Array&lt;Github_Pro.Follower&gt;&gt;, Swift.Optional&lt;Swift.String&gt;) -&gt; ()) -&gt; ()"
+                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Github_Pro.NetworkManager.getFollowers(for: Swift.String, page: Swift.Int, completed: (Swift.Result&lt;Swift.Array&lt;Github_Pro.Follower&gt;, Github_Pro.GFError&gt;) -&gt; ()) -&gt; ()"
                   moduleName = "Github-Pro"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/developer/Desktop/swift5/swiftUI2020/Sean-Allen/Github-Pro/Github-Pro/Manager/NetworkManager.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "32"
-                  endingLineNumber = "32"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
                   offsetFromSymbolStart = "239">
                </Location>
             </Locations>
@@ -161,6 +129,22 @@
             startingLineNumber = "45"
             endingLineNumber = "45"
             landmarkName = "getFollowers(for:page:completed:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EDE49F06-F4FF-40A6-84AD-B8519427E042"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Github-Pro/Custom Views/ImageView/GFAvatarImageView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "downloadImage(from:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
