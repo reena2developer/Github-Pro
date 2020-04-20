@@ -10,19 +10,19 @@ import Foundation
 
 struct User:Codable {
     
-    var login:String
-    var avatarUrl:String
-    var followersUrl:String
-    var followingUrl:String
+    let login:String
+    let avatarUrl:String
+    let followersUrl:String
+    let followingUrl:String
     var name:String?
-    var company:String
-    var blog:String
+    let company:String
+    let blog:String
     var location:String?
     var bio:String?
-    var publicRepos:Int
-    var publicGists:Int
-    var htmlUrl:String
-    var following:Int
-    var followers:Int
-    var createdAt:String
+    let publicRepos:Int
+    let publicGists:Int
+    let htmlUrl:String
+    let following:Int
+    let followers:Int
+    let createdAt:String
 }
