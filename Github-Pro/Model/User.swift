@@ -13,10 +13,10 @@ struct User:Codable {
     let login:String
     let avatarUrl:String
     let followersUrl:String
-    let followingUrl:String
+    let followingUrl:String?
     var name:String?
-    let company:String
-    let blog:String
+    let company:String?
+    let blog:String?
     var location:String?
     var bio:String?
     let publicRepos:Int
