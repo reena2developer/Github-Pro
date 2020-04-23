@@ -4,7 +4,7 @@
 //
 //  Created by Developer on 23/04/2020.
 //  Copyright © 2020 Developer. All rights reserved.
-//
+// create superclass for user info view 
 
 import UIKit
 
@@ -23,7 +23,7 @@ class GFItemInfoVC: UIViewController {
         super.viewDidLoad()
         configureBackgroundView()
         layoutUI()
-        
+        configureStackView()
 
     }
     
@@ -38,6 +38,9 @@ class GFItemInfoVC: UIViewController {
         
         stackView.axis = .horizontal
         stackView.distribution = .equalSpacing
+        
+        stackView.addArrangedSubview(itemInfoViewOne)
+        stackView.addArrangedSubview(itemInfoViewTwo)
     }
     
   private func layoutUI(){
