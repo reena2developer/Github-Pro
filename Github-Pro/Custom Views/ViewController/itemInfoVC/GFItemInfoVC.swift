@@ -4,7 +4,7 @@
 //
 //  Created by Developer on 23/04/2020.
 //  Copyright © 2020 Developer. All rights reserved.
-// create superclass for user info view 
+// create superclass for user info view controller
 
 import UIKit
 
@@ -14,6 +14,17 @@ class GFItemInfoVC: UIViewController {
     let itemInfoViewOne = GFItemInfoView()
     let itemInfoViewTwo = GFItemInfoView()
     let actionButton   = GFButton()
+    
+    var user: User!
+    
+    init(user: User) {
+        super.init(nibName: nil,bundle: nil)
+        self.user = user
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     
     
