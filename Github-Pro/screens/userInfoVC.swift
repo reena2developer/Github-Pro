@@ -7,6 +7,12 @@
 //
 
 import UIKit
+import SafariServices
+
+protocol UserInfoVCDelegate: class {
+    func didTapDidHubProfile(for user: User)
+    func didTapGetFollowers(for user: User)
+}
 
 class userInfoVC: UIViewController {
     
@@ -46,19 +52,30 @@ class userInfoVC: UIViewController {
             case .success(let user):
                 print(user)
                 DispatchQueue.main.async {
-                self.add(childVC: GFUserInfoHeaderVC(user: user), to: self.headerView)
-                self.add(childVC: GFRepoItemVC(user: user), to: self.itemViewOne)
-                self.add(childVC: GFFollowerItemVC(user: user), to: self.itemViewTwo)
-                    self.dateLabel.text = "Github since \(user.createdAt.convertToDisplayFormat())"
+                    self.configureUIelements(with: user)
 
                 }
             case .failure(let error):
-                self.presentGFAlertOnMainThread(title: "Somthing went wrong`", message: error.rawValue, buttonTitle: "Ok")
+                self.presentGFAlertOnMainThread(title: "Somthing went wrong", message: error.rawValue, buttonTitle: "Ok")
                 
             }
             
         }
         
+    }
+    
+    func configureUIelements(with user: User){
+        
+        let repoItemVC      = GFRepoItemVC(user: user)
+        repoItemVC.delegate = self
+        
+        let followerItemVC  = GFFollowerItemVC(user: user)
+        followerItemVC.delegate = self
+        
+        self.add(childVC: GFUserInfoHeaderVC(user: user), to: self.headerView)
+        self.add(childVC: repoItemVC, to: self.itemViewOne)
+        self.add(childVC: followerItemVC, to: self.itemViewTwo)
+        self.dateLabel.text = "Github since \(user.createdAt.convertToDisplayFormat())"
     }
     
     func configureViewController(){
@@ -128,3 +145,24 @@ class userInfoVC: UIViewController {
 
 
 }
+
+extension userInfoVC: UserInfoVCDelegate {
+    func didTapDidHubProfile(for user: User) {
+        print("tapped")
+        guard let url = URL(string: user.htmlUrl) else {
+            presentGFAlertOnMainThread(title: "Invalid URL", message: "This url attached to this user is invalid", buttonTitle: "ok")
+            return
+        }
+        
+        let safariVC = SFSafariViewController(url: url)
+        safariVC.preferredControlTintColor = .systemGreen
+        present(safariVC, animated: true)
+    }
+    
+    func didTapGetFollowers(for user: User) {
+        
+    }
+}
+
+
+
