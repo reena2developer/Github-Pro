@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SafariServices
 
 protocol UserInfoVCDelegate: class {
     func didTapDidHubProfile(for user: User)
@@ -25,6 +24,7 @@ class userInfoVC: UIViewController {
 
     
     var username:String!
+    weak var delegate:followerListVCDelegate!
     
 
     override func viewDidLoad() {
@@ -154,13 +154,19 @@ extension userInfoVC: UserInfoVCDelegate {
             return
         }
         
-        let safariVC = SFSafariViewController(url: url)
-        safariVC.preferredControlTintColor = .systemGreen
-        present(safariVC, animated: true)
+       presentSafariVC(with: url)
+        
     }
     
     func didTapGetFollowers(for user: User) {
+        print(user.login)
         
+        guard  user.followers != 0  else {
+            presentGFAlertOnMainThread(title: "No follower", message: "This user has no follower what a Shame 😭", buttonTitle: "So sad")
+            return
+        }
+        delegate.didRequestFollowers(for: user.login)
+        dismissVC()
     }
 }
 
