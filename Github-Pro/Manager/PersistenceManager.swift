@@ -16,7 +16,7 @@ enum PersistenceManager {
     }
     
     
-    // retriving the followring array from NSuserfeault 
+    // retriving the followring array from NSuserfeault
     static func retriveFavorites (completed: @escaping (Result<[Follower],GFError>) -> Void){
         
         guard let favoritesData = defaults.object(forKey: Keys.favorites) as? Data else {
@@ -34,5 +34,23 @@ enum PersistenceManager {
            
             completed(.failure(.unableToFavorites))
         }
+    }
+    
+    // save favorites follower in nsuserdefault
+    
+    static func  save(favorites: [Follower]) -> GFError? {
+        
+        
+        do {
+            let encoder = JSONEncoder()
+            let encodedFavorites = try encoder.encode(favorites)
+            defaults.set(encodedFavorites, forKey: Keys.favorites)
+            return nil
+            
+            
+        } catch {
+            return .unableToFavorites
+        }
+        
     }
 }
