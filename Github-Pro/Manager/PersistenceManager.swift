@@ -22,6 +22,8 @@ enum PersitenceManager {
     }
     
     
+    // function for combine save and retrive .add , .remove
+    
     static func updateWith(favorite: Follower, actionType: PersistenceActionType, completed: @escaping (GFError?) -> Void) {
         retrieveFavorites { result in
             switch result {
@@ -50,6 +52,9 @@ enum PersitenceManager {
     }
     
     
+    // retrive favorites from NSUserdefault
+
+    
     static func retrieveFavorites(completed: @escaping (Result<[Follower], GFError>) -> Void) {
         guard let favoritesData = defaults.object(forKey: Keys.favorites) as? Data else {
             completed(.success([]))
@@ -66,6 +71,9 @@ enum PersitenceManager {
     }
     
     
+    
+    // save favorites in NSUserdefault
+
     static func save(favorites: [Follower]) -> GFError? {
         do {
             let encoder = JSONEncoder()
