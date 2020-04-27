@@ -40,6 +40,7 @@
 		8B9555D024488B1D004BB0C8 /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9555CF24488B1D004BB0C8 /* UIHelper.swift */; };
 		8B9DD8D22451BDBA00E34CC3 /* Date+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9DD8D12451BDBA00E34CC3 /* Date+Ext.swift */; };
 		8B9DD8D42451BDFF00E34CC3 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9DD8D32451BDFF00E34CC3 /* String+Ext.swift */; };
+		8BC152FB24574F8100242225 /* GFTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC152FA24574F8100242225 /* GFTabbarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +79,7 @@
 		8B9555CF24488B1D004BB0C8 /* UIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
 		8B9DD8D12451BDBA00E34CC3 /* Date+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Ext.swift"; sourceTree = "<group>"; };
 		8B9DD8D32451BDFF00E34CC3 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
+		8BC152FA24574F8100242225 /* GFTabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFTabbarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 		8B0F081B2447101300AEBACF /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
+				8BC152F724574ED800242225 /* TabbarController */,
 				8B314FFF244B286700D94D12 /* Views */,
 				8B314FFD244B282000D94D12 /* Labels */,
 				8B314FFC244B27D400D94D12 /* ViewController */,
@@ -268,6 +271,14 @@
 			path = "Github-Pro";
 			sourceTree = "<group>";
 		};
+		8BC152F724574ED800242225 /* TabbarController */ = {
+			isa = PBXGroup;
+			children = (
+				8BC152FA24574F8100242225 /* GFTabbarController.swift */,
+			);
+			path = TabbarController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -354,6 +365,7 @@
 				8B392CC4245173F7005D3D9C /* GFItemInfoView.swift in Sources */,
 				8B6E93702456D9CD006FAFBE /* FavoriteCell.swift in Sources */,
 				8B73F5BF244F20F0003C000C /* Constant.swift in Sources */,
+				8BC152FB24574F8100242225 /* GFTabbarController.swift in Sources */,
 				8B0F082924476B1E00AEBACF /* GFError.swift in Sources */,
 				8B73F5BB244F137B003C000C /* GFUserInfoHeaderVC.swift in Sources */,
 				8B0F08152446E23200AEBACF /* GFbodyLabel.swift in Sources */,
