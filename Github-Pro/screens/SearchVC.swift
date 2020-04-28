@@ -13,6 +13,7 @@ class SearchVC: UIViewController {
     let logoImageView     = UIImageView()
     let usernameTextField = GFTextField()
     let callActionButton  = GFButton(backgroundColor: .systemGreen, title: "Get Followers")
+    var logoImageViewConstraint:NSLayoutConstraint!
     
     var isUserNameEntered:Bool {return !usernameTextField.text!.isEmpty }
     
@@ -37,6 +38,7 @@ class SearchVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: true)
+        usernameTextField.text = ""
     }
     
     
@@ -45,7 +47,7 @@ class SearchVC: UIViewController {
     //MARK: Custom Functions
     func createDismissKeyboardTapGesture(){
         
-        let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing))
+        let tap = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
         view.addGestureRecognizer(tap)
         
     }
@@ -55,11 +57,14 @@ class SearchVC: UIViewController {
         
         view.addSubview(logoImageView)
         logoImageView.translatesAutoresizingMaskIntoConstraints = false
-        logoImageView.image = UIImage(named: "gh-logo")!
+        logoImageView.image =  Images.ghLogo
+        
+        let topContraintConstant:CGFloat = DeviceTypes.isiPhoneSE || DeviceTypes.isiPhone8Zoomed ? 20 : 80
+        logoImageViewConstraint = logoImageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: topContraintConstant)
+        logoImageViewConstraint.isActive = true
         
         NSLayoutConstraint.activate([
         
-            logoImageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 80),
             logoImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             logoImageView.heightAnchor.constraint(equalToConstant: 200),
             logoImageView.widthAnchor.constraint(equalToConstant: 200)
@@ -109,10 +114,12 @@ class SearchVC: UIViewController {
         presentGFAlertOnMainThread(title: "Empty Username ", message: "Please enter a username. we need to know who look for 😀", buttonTitle: "Ok")
         return
     }
-        
-    let followersListVC      = FollowersListVC()
-    followersListVC.username = usernameTextField.text
-    followersListVC.title    = usernameTextField.text
+    
+    usernameTextField.resignFirstResponder()
+    
+    let followersListVC      = FollowersListVC(username: usernameTextField.text!)
+//    followersListVC.username = usernameTextField.text
+//    followersListVC.title    = usernameTextField.text
     navigationController?.pushViewController(followersListVC, animated: true)
     }
 
