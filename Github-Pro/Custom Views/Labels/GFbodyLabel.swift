@@ -19,11 +19,10 @@ class GFbodyLabel: UILabel {
         fatalError("init(coder:) has not been implemented")
     }
     
-    init(textAlignment: NSTextAlignment){
+   convenience init(textAlignment: NSTextAlignment){
         
-        super.init(frame: .zero)
+        self.init(frame: .zero)
         self.textAlignment = textAlignment
-        configure()
         
     }
     
