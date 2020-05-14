@@ -41,9 +41,24 @@ class GFEmptyStateView: UIView {
         logoImageVIew.image  =  Images.emptyStateLogo
         logoImageVIew.translatesAutoresizingMaskIntoConstraints = false
         
+        // condition  for checking the constraint for device like iphoneSE
+        let labelCenterYConstant:CGFloat = DeviceTypes.isiPhoneSE || DeviceTypes.isiPhone8Zoomed ? -80 : -150
+        
+        let messaageLabelCenterYConstraint =  messageLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant: labelCenterYConstant)
+        
+        messaageLabelCenterYConstraint.isActive = true
+        
+        
+        // condition  for checking the constraint for device like iphoneSE
+           let logoBottomConstant:CGFloat = DeviceTypes.isiPhoneSE || DeviceTypes.isiPhone8Zoomed ? 80 : 40
+           
+           let logoImageViewBottomConstraint =   logoImageVIew.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: logoBottomConstant)
+           
+           logoImageViewBottomConstraint.isActive = true
+        
+        
         NSLayoutConstraint.activate([
         
-            messageLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant: -150),
             messageLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 40),
             messageLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -40),
             messageLabel.heightAnchor.constraint(equalToConstant: 200),
@@ -52,7 +67,7 @@ class GFEmptyStateView: UIView {
             logoImageVIew.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 1.3),
             logoImageVIew.heightAnchor.constraint(equalTo: self.widthAnchor, multiplier: 1.3),
             logoImageVIew.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 170),
-            logoImageVIew.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 40)
+           
             
         
         ])
