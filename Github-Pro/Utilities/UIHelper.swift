@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-struct UIHelper {
+enum UIHelper {
     static  func createThreeColoumnFlowLayout(in view:UIView) -> UICollectionViewFlowLayout {
          
          
