@@ -30,9 +30,9 @@ class GFItemInfoView: UIView {
      
     private func configure(){
         
-        addSubview(symbolsImageView)
-        addSubview(titleLabel)
-        addSubview(countLabel)
+        
+        addSubviews(symbolsImageView,titleLabel,countLabel)
+    
         
         symbolsImageView.translatesAutoresizingMaskIntoConstraints = false
         symbolsImageView.contentMode = .scaleAspectFill
