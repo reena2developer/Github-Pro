@@ -215,7 +215,14 @@ extension FollowersListVC: UICollectionViewDelegate{
 
 extension FollowersListVC: UISearchResultsUpdating,UISearchBarDelegate {
     func updateSearchResults(for searchController: UISearchController) {
-        guard let filter = searchController.searchBar.text , !filter.isEmpty else { return  }
+        guard let filter = searchController.searchBar.text , !filter.isEmpty else {
+            
+            filteredFollowers.removeAll()
+            isSearching = false
+            updateData(on: followers)
+            return
+            
+        }
         
         isSearching = true  // in order to indentify  for getting whole list of followers or just a searched list of followers
         filteredFollowers  = followers.filter{ $0.login.lowercased().contains(filter.lowercased())}
