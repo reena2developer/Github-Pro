@@ -21,6 +21,8 @@ class FollowersListVC: GFDataLoadingVC {
     var page = 1
     var hasMoreFollower = true
     var isSearching = false
+    var isLoadingMoreFollowers = false
+    
     
     
     var username:String!
@@ -129,6 +131,9 @@ class FollowersListVC: GFDataLoadingVC {
         // loading indicator start
         
         showLoadingView()
+
+        // for handing  the increament pages
+        isLoadingMoreFollowers = true
         // very imporant  for the memory leak we need to make the self as a weak veriable but anything that is weak its going  to be optional , [weak self called the capture list]
         
         NetworkManager.shared.getFollowers(for: username, page: page) { [weak self] (result) in
@@ -152,7 +157,10 @@ class FollowersListVC: GFDataLoadingVC {
                 self.presentGFAlertOnMainThread(title: "Something went wrong", message:error.rawValue, buttonTitle: "Ok")
 
             }
+            
+            self.isLoadingMoreFollowers = false
         }
+        
     }
     
     func configureDataSource(){
@@ -187,7 +195,7 @@ extension FollowersListVC: UICollectionViewDelegate{
         
         
         if offSetY > contentHeight - height {
-            guard hasMoreFollower else {return}
+            guard hasMoreFollower ,!isLoadingMoreFollowers else {return}
             page += 1
 
             getFollowers(username: username, page: page)
